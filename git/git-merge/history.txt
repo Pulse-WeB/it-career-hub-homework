@@ -1,0 +1,19 @@
+  499  cd ~/Desktop
+  500  git clone https://github.com/Pulse-WeB/git-merge.git
+  501  cd git-merge
+  502  ls -la
+  503  git switch -c feature
+  504  echo "# Git Merge Homework" > README.md
+  505  echo "This repository is used to practice Git branches and merging." >> README.md
+  506  cat README.md
+  507  echo "*.log" >> .gitignore
+  508  git status
+  509  git add README.md .gitignore
+  510  git commit -m "Add README and update gitignore"
+  511  git push -u origin feature
+  512  git commit --amend -m "Add README and update gitignore ammend"
+  513  git push --force-with-lease origin feature
+  514  git switch main
+  515  git merge feature
+  516  git push origin main
+  517  history > history.txt
